@@ -1,0 +1,14 @@
+html{
+  background:#FAFAFA;
+}
+
+.flat_button{
+  background:#fff;
+  border:0px;
+  padding:10px;
+  outline:none;
+  transition: background 0.25s;
+}
+.flat_button:hover{
+  background:#2196F3;
+}
