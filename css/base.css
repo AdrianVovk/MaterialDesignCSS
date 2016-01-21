@@ -70,6 +70,7 @@ drawer{
   width:300px;
   left:-300px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: left 0.3s;
 }
 .drawerheader{
   background:#F44336;
@@ -102,12 +103,6 @@ drawer{
 	color: #fff;
 	font-size: 1.5em;
 	font-weight: 400;
-}
-#drawer-toggle-check{
-  display:none;
-  position:fixed;
-  width: 28px;
-  height: 28px;
 }
 .headerItemsContainer {
   float:right;

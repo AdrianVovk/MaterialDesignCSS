@@ -19,8 +19,7 @@
     <div class="header">
       <div class="headerBrand">
         <div class="headerItemRoot">
-          <img src="images/icons/menu.svg" class="headerItem">  
-          <input type="checkbox" id="drawer-toggle-check"/>
+          <img src="images/icons/menu.svg" class="headerItem" onclick="showDrawer()">
         </div>
         <title>Material Design</title>
       </div>
@@ -33,10 +32,15 @@
           </div>
       </div>
     </div>
-    <drawer>
+    <drawer id="mDrawer">
       <img class="drawerheader" src="images/md_header.png">
       <div>I am a drawer</div>
     </drawer>
+    <script>
+      function showDrawer(){
+        document.getElementById("mDrawer").style.left="0";
+      }
+    </script>
     <div class="content">
       <mdheader>Buttons</mdheader>
       <div>
