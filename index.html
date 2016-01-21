@@ -18,8 +18,8 @@
   <body>
     <div class="header">
       <div class="headerBrand">
-        <div class="headerItemRoot">
-          <img src="images/icons/menu.svg" class="headerItem" onclick="showDrawer()">
+        <div class="headerItemRoot" onclick="showDrawer()">
+          <img src="images/icons/menu.svg" class="headerItem">
         </div>
         <title>Material Design</title>
       </div>
@@ -35,17 +35,34 @@
     <scrim id="mDrawerScrim" onclick="hideDrawer()"></scrim>
     <drawer id="mDrawer">
       <img class="drawerheader" src="images/md_header.png">
-      <div>I am a drawer</div>
+      <div class="item">
+        <img src="images/icons/info.svg">
+        <text>Item</text>
+      </div>
+      <div class="item">
+        <img src="images/icons/info.svg">
+        <text>Item</text>
+      </div>
+      <div class="item">
+        <img src="images/icons/info.svg">
+        <text>Item</text>
+      </div>
+      <div class="divider"></div>
+      <div class="item">
+        <img src="images/icons/settings.svg">
+        <text>Settings</text>
+      </div>
     </drawer>
     <script>
       function showDrawer(){
         document.getElementById("mDrawer").style.left="0";
-        document.getElementById("mDrawerScrim").style.background="rgba(0, 0, 0, 0.15)"
+        document.getElementById("mDrawerScrim").style.background="rgba(0, 0, 0, 0.3)"
+        document.getElementById("mDrawerScrim").style.pointerEvents="all";
       }
       function hideDrawer(){
-        alert("Hi")
         document.getElementById("mDrawer").style.left="-300px";
-        document.getElementById("mDrawerScrim").style.background="transparent"
+        document.getElementById("mDrawerScrim").style.background="transparent";
+        document.getElementById("mDrawerScrim").style.pointerEvents="none";
       }
     </script>
     <div class="content">
