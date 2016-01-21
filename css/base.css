@@ -1,14 +1,177 @@
-html{
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	cursor:default;
+	-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button{
+  font-family: 'Roboto';
+}
+body{
   background:#FAFAFA;
+	font-size: 17px;
+	font-family: 'Roboto';
+	line-height: 1;
+}
+input{
+	transition:all 300ms;
 }
 
-.flat_button{
-  background:#fff;
-  border:0px;
-  padding:10px;
-  outline:none;
+content{
+  display:block;
+  padding:16px;
+  width:100%;
+  height:100%;
+}
+mdheader{
+  color:#F44336;
+  font-weight:400;
+}
+
+/*Drawer*/
+drawer{
+  display:none;
+  background:#FAFAFA;
+  position:fixed;
+  height:100%;
+  width:300px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.drawerheader{
+  background:#F44336;
+  height:160px;
+  width:100%;
+  object-fit: cover;
+}
+
+/*Header View*/
+header{
+  background:#F44336;
+  padding:5px;
+  width:100%;
+  height:60px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.headerBrand {
+  display: table;
+  text-align: center;
+  cursor: default;
+  float:left;
+  padding-left:5px;
+}
+.headerBrand title{
+  display: table-cell;
+  vertical-align: middle;
+  padding-left:5px;
+	color: #fff;
+	font-size: 1.5em;
+	font-family: 'Roboto';
+	font-weight: 400;
+}
+.headerItemsContainer {
+  float:right;
+  padding-right:5px;
+}
+.headerItemRoot{
+  float:left;
+	border-radius: 50%;
+	border: 0px;
+	width: 28px;
+  height: 28px;
+  padding:16px;
+  margin-left:6px;
   transition: background 0.25s;
 }
-.flat_button:hover{
-  background:#2196F3;
+.headerItem {
+  width: 28px;
+  height: 28px;
+}
+.headerItemRoot:hover,.headerItemRoot:focus{
+  background-color: #FF574A;
+}
+.headerItemRoot:active{
+  background-color: #FF6B5E;
+}
+
+/*Buttons*/
+.flat_button{
+  background:transparent;
+  color:#000;
+  border:0px;
+  border-radius:2.75px;
+  padding:10px;
+  outline:none;
+  margin:16px;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
+  box-shadow:none;
+}
+.flat_button:hover,.flat_button:focus{
+  background:#F44336;
+  color:#fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transform:scale(1.1);
+}
+
+.raised_button{
+  background:transparent;
+  color:#fff;
+  background:#F44336;
+  border:0px;
+  border-radius:2.75px;
+  padding:10px;
+  outline:none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.raised_button:hover,.raised_button:focus{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transform:scale(1.1);
+}
+
+/*Cards*/
+.card{
+  margin:auto;
+  border-radius: 3px;
+  padding:12px;
+  margin-top:16px;
+  margin-bottom:16px;
+	border: 0px;
+	background-color:#ffffff;
+	overflow:none;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
