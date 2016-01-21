@@ -32,6 +32,7 @@
           </div>
       </div>
     </div>
+    <scrim id="mDrawerScrim" onclick="hideDrawer()"></scrim>
     <drawer id="mDrawer">
       <img class="drawerheader" src="images/md_header.png">
       <div>I am a drawer</div>
@@ -39,6 +40,12 @@
     <script>
       function showDrawer(){
         document.getElementById("mDrawer").style.left="0";
+        document.getElementById("mDrawerScrim").style.background="rgba(0, 0, 0, 0.15)"
+      }
+      function hideDrawer(){
+        alert("Hi")
+        document.getElementById("mDrawer").style.left="-300px";
+        document.getElementById("mDrawerScrim").style.background="transparent"
       }
     </script>
     <div class="content">
