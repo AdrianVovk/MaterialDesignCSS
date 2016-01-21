@@ -20,23 +20,24 @@
       <img class="drawerheader" src="images/md_header.png">
       <div>I am a drawer</div>
     </drawer>
-    <header>
+    <div class="header">
       <div class="headerBrand">
         <div class="headerItemRoot">
-            <img src="images/icons/menu.svg" class="headerItem">  
-          </div>
+          <img src="images/icons/menu.svg" class="headerItem">  
+          <input type="checkbox" id="drawer-toggle-check"/>
+        </div>
         <title>Material Design</title>
       </div>
       <div class="headerItemsContainer">
-          <div class="headerItemRoot" onClick="parent.location='https://play.google.com/store/apps/dev?id=4871620813352984682'">
+          <div class="headerItemRoot">
             <img src="images/icons/shop.svg" class="headerItem">  
           </div>
           <div class="headerItemRoot">
             <img src="images/icons/overflow.svg" class="headerItem">  
           </div>
       </div>
-    </header>
-    <content>
+    </div>
+    <div class="content">
       <mdheader>Buttons</mdheader>
       <div>
         <button class="flat_button">Flat Button</button>
@@ -45,7 +46,6 @@
       <mdheader>Cards</mdheader>
       <div class="card" style="width:50%;">This is a card</div>
       <mdheader>Things</mdheader>
-      
-    </content>
+    </div>
   </body>
 </html>
