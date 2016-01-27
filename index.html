@@ -1,6 +1,4 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html>
   <head>
     <meta charset="utf-8">
@@ -14,7 +12,6 @@
     
     <link rel="stylesheet" href="css/base.css">
   </head>
-  
   <body>
     <div class="header">
       <div class="headerBrand">
@@ -32,6 +29,19 @@
           </div>
       </div>
     </div>
+    <script>
+    /*Drawer code*/
+      function showDrawer(){
+        document.getElementById("mDrawer").style.left="0";
+        document.getElementById("mDrawerScrim").style.background="rgba(0, 0, 0, 0.3)"
+        document.getElementById("mDrawerScrim").style.pointerEvents="all";
+      }
+      function hideDrawer(){
+        document.getElementById("mDrawer").style.left="-300px";
+        document.getElementById("mDrawerScrim").style.background="transparent";
+        document.getElementById("mDrawerScrim").style.pointerEvents="none";
+      }
+    </script>
     <scrim id="mDrawerScrim" onclick="hideDrawer()"></scrim>
     <drawer id="mDrawer">
       <img class="drawerheader" src="images/md_header.png">
@@ -53,18 +63,6 @@
         <text>Settings</text>
       </div>
     </drawer>
-    <script>
-      function showDrawer(){
-        document.getElementById("mDrawer").style.left="0";
-        document.getElementById("mDrawerScrim").style.background="rgba(0, 0, 0, 0.3)"
-        document.getElementById("mDrawerScrim").style.pointerEvents="all";
-      }
-      function hideDrawer(){
-        document.getElementById("mDrawer").style.left="-300px";
-        document.getElementById("mDrawerScrim").style.background="transparent";
-        document.getElementById("mDrawerScrim").style.pointerEvents="none";
-      }
-    </script>
     <div class="content">
       <mdheader>Buttons</mdheader>
       <div>
