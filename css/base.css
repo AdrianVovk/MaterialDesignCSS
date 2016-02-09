@@ -166,10 +166,10 @@ drawer .divider{
   transition: background 0.25s;
 }
 .headerItemRoot:hover,.headerItemRoot:focus{
-  background-color: #FF574A;
+  background-color: rgba(255,255,255, 0.15);
 }
 .headerItemRoot:active{
-  background-color: #FF6B5E;
+  background-color: rgba(255,255,255, 0.2);
 }
 
 /*Buttons*/
