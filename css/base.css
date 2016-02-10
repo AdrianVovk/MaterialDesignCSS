@@ -55,6 +55,7 @@ input{
 .content{
   display:block;
   padding:16px;
+  background:#FAFAFA;
   padding-top:86px;
 }
 mdheader{
@@ -101,6 +102,7 @@ drawer .item:hover, drawer .item:focus{
 drawer .item:active{
   background:rgba(0,0,0,0.1);
 }
+
 drawer .item img{
   width:26px;
   height:26px;
