@@ -24,9 +24,6 @@
           <div class="headerItemRoot" style="margin-right:8px;">
             <img src="images/icons/map.svg" class="headerItem">  
           </div>
-          <!--<div class="headerItemRoot">
-            <img src="images/icons/overflow.svg" class="headerItem">  
-          </div>-->
       </div>
     </div>
     <script>
@@ -45,26 +42,31 @@
     <scrim id="mDrawerScrim" onclick="hideDrawer()"></scrim>
     <drawer id="mDrawer">
       <img class="drawerheader" src="images/header.png">
-      <div class="item">
+      <script>
+        function switchPage(num) {
+          alert(num)
+        }
+      </script>
+      <div class="item" onclick="switchPage(0)">
         <img src="images/icons/home.svg">
         <text>Home</text>
       </div>
-      <div class="item">
+      <div class="item" onclick="switchPage(1)">
         <img src="images/icons/card.svg">
         <text>Tickets</text>
       </div>
       <div class="divider"></div>
-      <div class="item">
+      <div class="item" onclick="switchPage(2)">
         <img src="images/icons/help.svg">
         <text>Contact Us</text>
       </div>
-      <div class="item">
+      <div class="item" onclick="switchPage(3)">
         <img src="images/icons/settings.svg">
         <text>Settings</text>
       </div>
     </drawer>
     <div class="content" id="home">
-      <iframe src="pages/home.html"></iframe>
+
     </div>
   </body>
 </html>
