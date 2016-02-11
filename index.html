@@ -44,7 +44,15 @@
       <img class="drawerheader" src="images/header.png">
       <script>
         function switchPage(num) {
-          alert(num)
+          //Deselects
+          var y = document.getElementsByClassName("itemselected");
+          for (i=0; i < y.length; i++){
+            y[i].className = "item";
+          }
+          
+          //Selects
+          var x = document.getElementsByClassName("item");
+          x[num].className = "itemselected";
         }
       </script>
       <div class="item" onclick="switchPage(0)">
