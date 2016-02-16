@@ -54,9 +54,11 @@ input{
 
 .content{
   display:block;
+  position:absolute;
   padding:16px;
   background:#FAFAFA;
-  padding-top:86px;
+  top:80px;
+  padding-top:6px;
 }
 mdheader{
   color:#673AB7;

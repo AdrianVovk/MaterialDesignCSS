@@ -21,7 +21,7 @@
         <title>Home</title>
       </div>
       <div class="headerItemsContainer">
-          <div class="headerItemRoot" style="margin-right:8px;">
+          <div class="headerItemRoot" style="margin-right:8px;" onclick="parent.location='https://www.google.com/maps/place/Cedar+Point/@41.482211,-82.6857093,17z/data=!3m1!4b1!4m2!3m1!1s0x883a44453409f6b7:0xae0d3d15735875a7'">
             <img src="images/icons/map.svg" class="headerItem">  
           </div>
       </div>
@@ -56,11 +56,12 @@
           //Select Page
           switch(num){
             case 0:
+              document.getElementById("tickets").style.visibility = "hidden";
+              document.getElementById("home").style.visibility = "visible";
               break;
             case 1:
-              break;
-            case 2:
-              location.href = "mailto:vovk.adrian@nolmsted.org?Subject=IV%20DV%20Amusement%20Park";
+              document.getElementById("home").style.visibility = "hidden";
+              document.getElementById("tickets").style.visibility = "visible";
               break;
           }
         }
@@ -74,16 +75,16 @@
         <text>Tickets</text>
       </div>
       <div class="divider"></div>
-      <div class="item" onclick="switchPage(2)">
+      <div class="item" onclick="parent.location='mailto:vovk.adrian@nolmsted.org?Subject=IV%20DV%20Amusement%20Park'">
         <img src="images/icons/help.svg">
         <text>Contact Us</text>
       </div>
     </drawer>
     <div class="content" id="home">
-
+      HI
     </div>
-    <div class="content" id="tickets">
-
+    <div class="content" id="tickets" style="visibility=hidden;">
+      aaa
     </div>
   </body>
 </html>
