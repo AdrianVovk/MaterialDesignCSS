@@ -52,6 +52,17 @@
           //Selects
           var x = document.getElementsByClassName("item");
           x[num].className = "itemselected";
+          
+          //Select Page
+          switch(num){
+            case 0:
+              break;
+            case 1:
+              break;
+            case 2:
+              location.href = "mailto:vovk.adrian@nolmsted.org?Subject=IV%20DV%20Amusement%20Park";
+              break;
+          }
         }
       </script>
       <div class="item" onclick="switchPage(0)">
@@ -67,12 +78,11 @@
         <img src="images/icons/help.svg">
         <text>Contact Us</text>
       </div>
-      <div class="item" onclick="switchPage(3)">
-        <img src="images/icons/settings.svg">
-        <text>Settings</text>
-      </div>
     </drawer>
     <div class="content" id="home">
+
+    </div>
+    <div class="content" id="tickets">
 
     </div>
   </body>
