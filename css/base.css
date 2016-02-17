@@ -54,12 +54,15 @@ input{
 
 .content{
   display:block;
-  position:absolute;
   padding:16px;
   background:#FAFAFA;
-  top:80px;
-  padding-top:6px;
+  padding-top:86px;
+  transition: all 0.5s;
 }
+.content div{
+  position:absolute;
+}
+
 mdheader{
   color:#673AB7;
   font-weight:400;
@@ -73,15 +76,19 @@ drawer{
   height:100%;
   width:300px;
   left:-300px;
+  z-index:10;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.3);
   transition: left 0.3s;
 }
 scrim{
   pointer-events: none;
-  position:absolute;
+  position:fixed;
   background:transparent;
   width:100%;
   height:100%;
+  z-index:10;
+  top:0px;
+  left:0px;
   transition: background 0.3s;
 }
 .drawerheader{
@@ -158,6 +165,7 @@ drawer .divider{
   padding:5px;
   width:100%;
   height:60px;
+  z-index:9;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .headerBrand {

@@ -64,6 +64,9 @@
               document.getElementById("tickets").style.visibility = "visible";
               break;
           }
+          
+          //Close the drawer
+          hideDrawer();
         }
       </script>
       <div class="item" onclick="switchPage(0)">
@@ -80,11 +83,16 @@
         <text>Contact Us</text>
       </div>
     </drawer>
-    <div class="content" id="home">
-      HI
-    </div>
-    <div class="content" id="tickets" style="visibility=hidden;">
-      aaa
+    <div class="content">
+      <!--Content for the home tab-->
+      <div id="home">
+        <img src="https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-6.jpg">
+      </div>
+      
+      <!--Content for the tickets tab-->
+      <div id="tickets" style="visibility:hidden;">
+        <img src="https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-5.jpg">
+      </div>
     </div>
   </body>
 </html>
