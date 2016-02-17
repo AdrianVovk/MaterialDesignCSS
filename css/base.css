@@ -59,8 +59,9 @@ input{
   padding-top:86px;
   transition: all 0.5s;
 }
-.content div{
+.content a{
   position:absolute;
+  width:100%;
 }
 
 mdheader{
