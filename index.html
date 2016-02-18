@@ -18,7 +18,7 @@
         <div class="headerItemRoot" onclick="showDrawer()">
           <img src="images/icons/menu.svg" class="headerItem">
         </div>
-        <title>Home</title>
+        <title id="title">Home</title>
       </div>
       <div class="headerItemsContainer">
           <div class="headerItemRoot" style="margin-right:8px;" onclick="parent.location='https://www.google.com/maps/place/Cedar+Point/@41.482211,-82.6857093,17z/data=!3m1!4b1!4m2!3m1!1s0x883a44453409f6b7:0xae0d3d15735875a7'">
@@ -43,7 +43,7 @@
     <drawer id="mDrawer">
       <img class="drawerheader" src="images/header.png">
       <script>
-        function switchPage(num) {
+        function switchPage(num, text) {
           //Deselects
           var y = document.getElementsByClassName("itemselected");
           for (i=0; i < y.length; i++){
@@ -52,7 +52,7 @@
           //Selects
           var x = document.getElementsByClassName("item");
           x[num].className = "itemselected";
-          
+    
           //Select Page
           switch(num){
             case 0:
@@ -65,15 +65,17 @@
               break;
           }
           
+          document.getElementById("title").innerHTML = text;
+          
           //Close the drawer
           hideDrawer();
         }
       </script>
-      <div class="item" onclick="switchPage(0)">
+      <div class="item" onclick="switchPage(0, 'Home')">
         <img src="images/icons/home.svg">
         <text>Home</text>
       </div>
-      <div class="item" onclick="switchPage(1)">
+      <div class="item" onclick="switchPage(1, 'Tickets')">
         <img src="images/icons/card.svg">
         <text>Tickets</text>
       </div>
@@ -95,6 +97,8 @@
       <a id="tickets" style="visibility:hidden;">
         <div class="card" style="width:90%;">
           <mdheader>Tickets</mdheader>
+          <button class="raised_button" style="float:right;">$19.99*</button>
+          <div style="float:right;text-size:12px;">*Per Person</div>
         </div>
       </a>
     </div>

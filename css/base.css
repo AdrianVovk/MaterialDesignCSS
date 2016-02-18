@@ -245,6 +245,7 @@ drawer .divider{
 
 /*Cards*/
 .card{
+  display:block;
   margin:auto;
   border-radius: 3px;
   padding:12px;
