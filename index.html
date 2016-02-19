@@ -62,6 +62,7 @@
             case 1:
               document.getElementById("home").style.visibility = "hidden";
               document.getElementById("tickets").style.visibility = "visible";
+              location.hash = "tickets"
               break;
           }
           
@@ -69,6 +70,12 @@
           
           //Close the drawer
           hideDrawer();
+        }
+        window.onhashchange = function() {       
+          switch(location.hash) {
+            case "tickets":
+              switchpage(1, "Tickets");
+          }
         }
       </script>
       <div class="item" onclick="switchPage(0, 'Home')">
@@ -97,11 +104,11 @@
       <a id="tickets" style="visibility:hidden;">
         <div class="card" style="width:90%;">
           <mdheader>Tickets</mdheader>
+          
           <div style="float:right;">
-            <button class="raised_button" style="float:right;">$19.99*</button>
+            <button class="raised_button" style="float:right;" onclick="parent.location='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">$19.99*</button>
             <div style="font-size:.5em;text-align:right;margin-top:40px;">*Per Person</div>
           </div>
-          
         </div>
       </a>
     </div>
