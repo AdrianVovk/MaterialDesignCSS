@@ -12,8 +12,8 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#673AB7">
     
-    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/textbox.css">
+    <link rel="stylesheet" href="css/base.css">
     <audio id="rickroll" src="audio/rickroll.mp3" preload="auto"></audio>
 
   </head>
@@ -122,15 +122,15 @@ These tickets have a 100% chance of bringing a smile to your kids' faces! All we
               document.getElementById('header').src = "images/rickroll.gif"
             }
           </script>
-          <button class="raised_button" style="float:right;" onclick="rickroll()">Buy Now</button> 
+          <button class="raised_button" style="float:right;margin_top:5px" onclick="rickroll()">Buy Now</button> 
         </div>
         <div id="card_input">
           
-          <div class="group">
-            <input type="nuumber" required>
+          <div class="textbox">
+            <input type="text" required>
             <span class="highlight"></span>
             <span class="bar"></span>
-            <label>Credit Card Number</label>
+            <textbox_label>Credit Card Number</textbox_label>
           </div>
           
         </div>

@@ -1,4 +1,6 @@
-* { box-sizing:border-box; }
+.textbox, input, .highlight, .bar, textbox_label {
+  box-sizing:border-box; 
+}
 .container 		{ 
   font-family:'Roboto';
   width:600px; 
@@ -11,7 +13,7 @@
 .footer a  { color:#53B2C8; }
 
 /* form starting stylings ------------------------------- */
-.group 			  { 
+.textbox { 
   position:relative; 
   margin-bottom:45px; 
 }
@@ -27,8 +29,7 @@ input:focus{
   outline:none; 
 }
 
-/* LABEL ======================================= */
-label {
+textbox_label {
   color:#999; 
   font-size:18px;
   font-weight:normal;
@@ -42,7 +43,7 @@ label {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label 		{
+input:focus ~ textbox_label, input:valid ~ textbox_label 		{
   top:-20px;
   font-size:14px;
   color:#5264AE;
