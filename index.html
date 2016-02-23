@@ -13,6 +13,8 @@
     <meta name="theme-color" content="#673AB7">
     
     <link rel="stylesheet" href="css/base.css">
+    <audio id="rickroll" src="audio/rickroll.mp3" preload="auto"></audio>
+
   </head>
   <body>
     <div class="header">
@@ -115,14 +117,13 @@ These tickets have a 100% chance of bringing a smile to your kids' faces! All we
             function rickroll() {
               document.getElementById('rickroll').play();
               document.getElementById('rickroll').addEventListener("ended", function(){
-                alert("Resetting the website to its default state")
+                alert("Ok. I'm done now.")
               document.getElementById('header').src = "images/header.png"
               })
               document.getElementById('header').src = "images/rickroll.gif"
             }
           </script>
           <button class="raised_button" style="float:right;" onclick="rickroll()">Buy Now </button> 
-          <audio id="rickroll" src="audio/rickroll.mp3" preload="auto"></audio>
         </div>
       </a>
     </div>
