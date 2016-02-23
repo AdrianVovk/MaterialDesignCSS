@@ -43,7 +43,7 @@
     </script>
     <scrim id="mDrawerScrim" onclick="hideDrawer()"></scrim>
     <drawer id="mDrawer">
-      <img class="drawerheader" src="images/header.png">
+      <img class="drawerheader" id="header" src="images/header.png">
       <script>
         function switchPage(num, text) {
           //Deselects
@@ -60,6 +60,7 @@
             case 0:
               document.getElementById("tickets").style.visibility = "hidden";
               document.getElementById("home").style.visibility = "visible";
+              location.hash = "";
               break;
             case 1:
               document.getElementById("home").style.visibility = "hidden";
@@ -110,7 +111,18 @@
           <mdheader>Tickets</mdheader>
           <div>Only $19.99 per person! Who can pass up such a steal?!?
 These tickets have a 100% chance of bringing a smile to your kids' faces! All we need is your credit card info!</div>
-          <button class="raised_button" style="float:right;" onclick="parent.location='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Buy Now </button> 
+          <script>
+            function rickroll() {
+              document.getElementById('rickroll').play();
+              document.getElementById('rickroll').addEventListener("ended", function(){
+                alert("Resetting the website to its default state")
+              document.getElementById('header').src = "images/header.png"
+              })
+              document.getElementById('header').src = "images/rickroll.gif"
+            }
+          </script>
+          <button class="raised_button" style="float:right;" onclick="rickroll()">Buy Now </button> 
+          <audio id="rickroll" src="audio/rickroll.mp3" preload="auto"></audio>
         </div>
       </a>
     </div>
