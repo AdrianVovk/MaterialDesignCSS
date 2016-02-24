@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
     
     <title>IV/DV Amusement Park</title>
-    <meta name="description" content="Adrian Vovk making material design websites">
+    <meta name="description" content="The official website for the IV/DV Amusement Park">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#673AB7">
@@ -121,17 +121,17 @@ These tickets have a 100% chance of bringing a smile to your kids' faces! All we
         <script>
            /*Dialog code*/
            function showDialog(){
-            document.getElementById("mDrawer").style="transform:scale(1);";
+            document.getElementById("mDialog").style.transform="scale(1)";
             document.getElementById("mDialogScrim").style.background="rgba(0, 0, 0, 0.3)"
             document.getElementById("mDialogScrim").style.pointerEvents="all";
           }
           function hideDialog(){
-            document.getElementById("mDrawer").style="transform:scale(0);";
+            document.getElementById("mDialog").style.transform="scale(0)";
             document.getElementById("mDialogScrim").style.background="transparent";
             document.getElementById("mDialogScrim").style.pointerEvents="none";
           }
         </script>
-        <div class="card" style="width:50%;padding-top:36px;position:fixed;left:25%;z-index:50;  transform:scale(0);">
+        <div class="card" id="mDialog" style="width:50%;padding-top:36px;position:fixed;left:25%;top:25%;z-index:50;transform:scale(0);">
           <div style="margin:auto;width:99%;">
             <div class="textbox" style="display:inline-block;width:49%;">
               <input type="text" required>
@@ -146,7 +146,7 @@ These tickets have a 100% chance of bringing a smile to your kids' faces! All we
             </div>
             
           </div>
-          <div>
+          <div style="margin-bottom:-30px;">
             <div class="textbox" style="display:inline-block;width:89%;">
               <input type="text" required>
               <span class="bar"></span>
@@ -168,9 +168,12 @@ These tickets have a 100% chance of bringing a smile to your kids' faces! All we
               document.getElementById('header').src = "images/header.png"
               })
               document.getElementById('header').src = "images/rickroll.gif"
+              
+              hideDialog();
             }
           </script>
-          <button class="raised_button" style="width:25%;float:right;margin-right:5px;" onclick="rickroll()">Accept</button> 
+          <button class="flat_button" style="float:right;margin-right:5px;" onclick="rickroll()">Accept</button>
+          <button class="flat_button" style="float:right;margin-right:5px;" onclick="hideDialog()">Cancel</button>
         </div>
         
       </a>
