@@ -1,0 +1,34 @@
+.flat_button{
+  background:transparent;
+  color:#673AB7;
+  border:0px;
+  border-radius:2.75px;
+  padding:10px;
+  margin:2px;
+  outline:none;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s;
+  box-shadow:none;
+}
+.flat_button:hover,.flat_button:focus{
+  background:#673AB7;
+  color:#fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transform:scale(1.1);
+}
+
+.raised_button{
+  background:transparent;
+  color:#fff;
+  background:#673AB7;
+  border:0px;
+  border-radius:2.75px;
+  padding:10px;
+  margin:2px;
+  outline:none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.raised_button:hover,.raised_button:focus{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transform:scale(1.1);
+}
