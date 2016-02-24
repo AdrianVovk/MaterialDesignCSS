@@ -4,9 +4,7 @@
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
 	cursor:default;
-	display: block;
 	font-family:'Roboto';
 	line-height: 1;
 	-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
@@ -18,6 +16,10 @@ blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
+}
+
+body{
+  background:#FAFAFA;
 }
 
 .content{
