@@ -45,7 +45,7 @@
 }
 
 /* active state */
-.textbox input:focus ~ label, .textbox input:valid ~ label, .textbox input:invalid ~ label {
+.textbox input:focus ~ label, .textbox input:valid ~ label{
   top:-20px;
   font-size:14px;
 }
