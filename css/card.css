@@ -15,5 +15,5 @@
 .card text{
   font-size:0.8em;
   margin-top:5px;
-  white-space: pre;
+  white-space: pre-line;
 }
