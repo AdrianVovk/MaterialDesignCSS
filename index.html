@@ -127,12 +127,17 @@ These tickets have a 100% chance of bringing a smile to your kids' faces! All we
         
         <!--Credit card entry-->
         <scrim id="mDrawerScrim" onclick="hideDrawer()"></scrim>
-        <div id="card_input" >
-          <div class="textbox">
+        <div id="card_input">
+          <div class="textbox" style="display:inline-block;">
             <input type="text" required>
-            <span class="highlight"></span>
             <span class="bar"></span>
-            <textbox_label>Credit Card Number</textbox_label>
+            <label>Credit Card Number</label>
+          </div>
+          
+          <div class="textbox" style="display:inline-block;width:120px;">
+            <input type="number" min="0" max="999" required>
+            <span class="bar"></span>
+            <label>CVC</label>
           </div>
           
         </div>

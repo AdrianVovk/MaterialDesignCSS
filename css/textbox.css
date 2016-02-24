@@ -1,8 +1,8 @@
-.textbox, input, .highlight, .bar, textbox_label {
+.textbox, input, .bar, label {
   box-sizing:border-box;
   background-color:transparent;
 }
-.container 		{ 
+.container { 
   font-family:'Roboto';
   width:600px; 
   margin:30px auto 0; 
@@ -17,20 +17,21 @@
 .textbox { 
   position:relative; 
   margin-bottom:45px;
+  width:400px;
 }
-input 				{
+.textbox input {
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
-  width:300px;
+  width:100%;
   border:none;
   border-bottom:1px solid #757575;
 }
-input:focus{
+.textbox input:focus{
   outline:none; 
 }
 
-textbox_label {
+.textbox label {
   color:#999; 
   font-size:18px;
   font-weight:normal;
@@ -44,14 +45,18 @@ textbox_label {
 }
 
 /* active state */
-input:focus ~ textbox_label, input:valid ~ textbox_label 		{
+.textbox input:focus ~ label, .textbox input:valid ~ label, .textbox input:invalid ~ label {
   top:-20px;
   font-size:14px;
 }
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:300px; }
-.bar:before, .bar:after 	{
+.textbox .bar 	{
+  position:relative;
+  display:block;
+  width:100%; 
+}
+.textbox .bar:before, .textbox .bar:after 	{
   content:'';
   height:2px; 
   width:0;
@@ -62,46 +67,12 @@ input:focus ~ textbox_label, input:valid ~ textbox_label 		{
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
-.bar:before {
+.textbox .bar:before {
   left:50%;
 }
-.bar:after {
+.textbox .bar:after {
   right:50%; 
 }
-
-/* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
-}
-
-/* HIGHLIGHTER ================================== */
-.highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
-
-/* active state */
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-}
-
-/* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-	from { background:#673AB7; }
-  to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-	from { background:#673AB7; }
-  to 	{ width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-	from { background:#673AB7; }
-  to 	{ width:0; background:transparent; }
 }
