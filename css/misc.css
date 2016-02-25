@@ -1,6 +1,7 @@
 mdheader{
   color:#673AB7;
   font-weight:400;
+  white-space: pre-line;
 }
 scrim{
   pointer-events: none;

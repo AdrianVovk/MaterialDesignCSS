@@ -30,13 +30,11 @@
         <title id="title">Home</title>
       </div>
       <div class="headerItemsContainer">
-          <div class="headerItemRoot" style="margin-right:8px;" onclick="parent.location='https://www.google.com/maps/place/IV+DV+Amusement+Park/@39.8620608,-121.9917656,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x1e4292f07d34a23d?hl=en-US'">
-            <img src="images/icons/map.svg" class="headerItem">  
-          </div>
-      </div>
-      <div class="headerItemsContainer">
           <div class="headerItemRoot" onclick="parent.location='https://www.youtube.com/watch?v=YEkc8C315Aw'">
             <img src="images/icons/video.svg" class="headerItem">  
+          </div>
+          <div class="headerItemRoot" style="margin-right:8px;" onclick="parent.location='https://www.google.com/maps/place/IV+DV+Amusement+Park/@39.8620608,-121.9917656,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x1e4292f07d34a23d?hl=en-US'">
+            <img src="images/icons/map.svg" class="headerItem">  
           </div>
       </div>
     </div>
@@ -114,10 +112,33 @@
       <!--Content for the home tab-->
       <a id="home">
         <div class="card" style="width:75%;">
-          
+          <mdheader>Welcome!</mdheader>
+          <text>
+          IV/DV Amusement Park is a glorious establishment with fun rides. You will enjoy your stay here. Feel free to expore the site! Here are the rides.
+          </text>
+          <mdheader>
+            A</mdheader>
+          <text>
+            Placeholder
+          </text>
+          <mdheader>
+            A</mdheader>
+          <text>
+            Placeholder
+          </text>
+          <mdheader>
+            A</mdheader>
+          <text>
+            Placeholder
+          </text>
+          <mdheader>
+            A</mdheader>
+          <text>
+            Placeholder
+          </text>
         </div>
       </a>
-      
+
       <!--Content for the tickets tab-->
       <a id="tickets" style="visibility:hidden;">
         <div class="card" style="width:75%;">
@@ -125,7 +146,6 @@
           <text>&#10;Only $19.99 per person! Who can pass up such a steal?!?&#10;These tickets have a 100% chance of bringing a smile to your kids' faces! All we need is your credit card info!&#10;</text>
           <button class="raised_button" style="float:right;margin_top:5px" onclick="showDialog()">Buy Now</button> 
         </div>
-        
         <!--Credit card entry-->
         <scrim id="mDialogScrim" onclick="hideDialog();"></scrim>
         <script>
@@ -148,13 +168,11 @@
               <span class="bar"></span>
               <label>First Name</label>
             </div>
-            
             <div class="textbox" style="display:inline-block;width:49%;">
               <input type="text" required>
               <span class="bar"></span>
               <label>Last Name</label>
             </div>
-            
           </div>
           <div style="margin-bottom:-30px;">
             <div class="textbox" style="display:inline-block;width:89%;">
@@ -162,14 +180,12 @@
               <span class="bar"></span>
               <label>Credit Card Number</label>
             </div>
-            
             <div class="textbox" style="display:inline-block;width:9%;">
               <input type="number" min="0" max="999" required>
               <span class="bar"></span>
               <label>CVC</label>
             </div>
           </div>
-          
           <script>
             function rickroll() {
               document.getElementById('rickroll').play();
@@ -185,7 +201,6 @@
           <button class="flat_button" style="float:right;margin-right:5px;" onclick="rickroll()">Accept</button>
           <button class="flat_button" style="float:right;margin-right:5px;" onclick="hideDialog()">Cancel</button>
         </div>
-        
       </a>
     </div>
   </body>
