@@ -57,27 +57,36 @@
     <drawer id="mDrawer">
       <img class="drawerheader" id="header" src="images/header.png">
       <script>
+       $(document).ready(new function(){
+          switch (window.location.hash.substring(1)) {
+            case "tickets":
+              switchPage(1, "Tickets");
+              break;
+          }
+        });
+      
         function switchPage(num, text) {
           //Deselects
           var y = document.getElementsByClassName("itemselected");
           for (i=0; i < y.length; i++){
             y[i].className = "item";
           }
+          
           //Selects
           var x = document.getElementsByClassName("item");
           x[num].className = "itemselected";
-    
+          
           //Select Page
           switch(num){
             case 0:
               document.getElementById("tickets").style.visibility = "hidden";
               document.getElementById("home").style.visibility = "visible";
-              location.hash = "";
+              window.location.hash = "";
               break;
             case 1:
               document.getElementById("home").style.visibility = "hidden";
               document.getElementById("tickets").style.visibility = "visible";
-              location.hash = "tickets"
+              window.location.hash = "tickets"
               break;
           }
           
@@ -85,12 +94,6 @@
           
           //Close the drawer
           hideDrawer();
-        }
-        window.onhashchange = function() {       
-          switch(location.hash) {
-            case "tickets":
-              switchpage(1, "Tickets");
-          }
         }
       </script>
       <div class="item" onclick="switchPage(0, 'Home')">
