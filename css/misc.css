@@ -3,6 +3,9 @@ mdheader{
   font-weight:400;
   white-space: pre-line;
 }
+b {
+  font-weight:600;
+}
 scrim{
   pointer-events: none;
   position:fixed;
