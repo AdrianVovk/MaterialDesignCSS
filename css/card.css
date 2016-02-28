@@ -17,3 +17,9 @@
   margin-top:5px;
   white-space: pre-line;
 }
+.card p{
+  font-size:0.8em;
+  margin-top:5px;
+  white-space: pre-line;
+  text-indent: 25px;
+}
